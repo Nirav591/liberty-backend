@@ -10,6 +10,7 @@ const exhibitionCatRoute = require('./routes/exhibition-category.route');
 const exhibitionImgRoute = require('./routes/exhibition-image.route');
 const productRoute = require('./routes/product.route');
 const eventRoute = require('./routes/event.route');
+const registerOnlineRoute = require('./routes/register-online.route');
 
 const { verifyToken } = require('./middlewares/verify-token');
 
@@ -32,6 +33,7 @@ app.use('/exhibition-category', verifyToken, exhibitionCatRoute);
 app.use('/exhibition-image', verifyToken, exhibitionImgRoute);
 app.use('/product', verifyToken, productRoute);
 app.use('/event', verifyToken, eventRoute);
+app.use('/register-online', verifyToken, registerOnlineRoute);
 
 
 app.listen(port, () => {

@@ -1,5 +1,4 @@
 const {pool} = require('../config/sql.config');
-const emailValidator = require('email-validator');
 
 const handleDatabaseError = (res, err) => {
   console.error('Database error:', err);
